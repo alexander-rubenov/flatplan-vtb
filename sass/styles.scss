@@ -15,7 +15,7 @@ body {
     font-family: 'VTBGroup', sans-serif;
     font-size: 16px;
 
-    height: 2000px;
+    height: 5000px;
 }
 
 ul {
@@ -32,7 +32,7 @@ ul {
     }
 
     @media #{$mobile} {
-        padding: 0 15px;
+        padding: 0 20px;
     }
 }
 // -- wrapper
@@ -50,6 +50,8 @@ ul {
     color: #ffffff;
     border-radius: 4px;
     font-size: 16px;
+    outline: none;
+    border: none;
 }
 // -- button
 
@@ -65,6 +67,19 @@ ul {
 
     @media #{$mobile} {
         font-size: 24px;
+    }
+}
+
+.header--h3 {
+    font-size: 36px;
+    text-align: left;
+
+    @media #{$tablet} {
+        font-size: 22px;
+    }
+
+    @media #{$mobile} {
+        font-size: 18px;
     }
 }
 // --header
@@ -166,6 +181,14 @@ ul {
 }
 
 // how-it-works
+.how-it-works {
+    margin-bottom: 80px;
+
+    @media #{$tablet} {
+        margin-bottom: 50px;
+    }
+}
+
 .how-it-works__wrapper {
     padding: 0 15px;
 }
@@ -239,3 +262,80 @@ ul {
     }
 }
 // -- how-it-works
+
+// what-you-get
+.what-you-get__wrapper {
+    padding: 0 20px;
+}
+
+.what-you-get__header {
+    margin-bottom: 40px;
+}
+
+.what-you-get__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+
+    @media #{$tablet} {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+}
+
+.what-you-get__item:nth-child(even) {
+    @media #{$tablet} {
+        flex-direction: column-reverse;
+    }
+}
+
+.what-you-get__image-wrapper {
+    min-width: 51%;
+
+    @media #{$tablet} {
+        min-width: 100%;
+    }
+}
+
+.what-you-get__image {
+    max-width: 100%;
+    height: auto;
+
+    vertical-align: middle;
+
+    border-radius: 4px;
+
+    @media #{$tablet} {
+        margin-bottom: 15px;
+    }
+}
+
+.what-you-get__image-wrapper:nth-child(odd) {
+    margin-right: 10.5%;
+
+    @media #{$tablet} {
+        margin-right: 0;
+    }
+}
+
+.what-you-get__text-content:nth-child(odd) {
+    margin-right: 8.75%;
+
+    @media #{$tablet} {
+        margin-right: 0;
+    }
+}
+
+.what-you-get__item-header {
+    margin-bottom: 10px;
+}
+
+.what-you-get__item-description {
+    opacity: 0.4;
+    margin-bottom: 20px;
+}
+
+.what-you-get__button {
+    width: 195px;
+}
+// -- what-you-get
