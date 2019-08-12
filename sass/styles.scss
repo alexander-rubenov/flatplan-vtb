@@ -1,0 +1,141 @@
+
+$blue: #1D4AD7;
+$mobile: (max-width: 320px);
+$tablet: (max-width: 536px);
+$desktop: (max-width: 1024px);
+$full-desktop: (max-width: 1400px);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+// wrapper
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    @media #{$mobile} {
+        padding: 0 15px;
+    }
+}
+// -- wrapper
+
+// button
+.button {
+    display: block;
+    width: 135px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 16px;
+}
+// -- button
+
+// header
+.header {
+    text-align: center;
+    font-size: 48px;
+    color: #404040;
+
+    @media #{$tablet} {
+        font-size: 32px;
+    }
+
+    @media #{$mobile} {
+        font-size: 24px;
+    }
+}
+// --header
+
+// page-header
+.page-header {
+    width: 100%;
+    background: #ffffff url('../img/background-header.png') no-repeat center center;
+    background-size: cover;
+}
+
+.page-header__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 144px;
+
+    @media #{$tablet} {
+        padding-top: 50px;
+        padding-bottom: 72px;
+    }
+}
+
+.page-header__logos {
+    width: 245px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @media #{$mobile} {
+        margin-bottom: 30px;
+        flex-direction: column;
+    }
+}
+
+.page-header__logo-vtb {
+    @media #{$mobile} {
+        margin-bottom: 15px;
+    }
+}
+
+.page-header__plus-sign {
+    font-size: 25px;
+    font-weight: bold;
+
+    @media #{$mobile} {
+        margin-bottom: 15px;
+    }
+}
+
+.page-header__text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-header__title {
+    margin-bottom: 10px;
+    opacity: 0.3;
+    font-size: 16px;
+}
+
+.page-header__header {
+    margin-bottom: 10px;
+
+    @media #{$tablet} {
+        margin-bottom: 20px;
+    }
+}
+
+.page-header__description {
+    text-align: center;
+    opacity: 0.5;
+    margin-bottom: 51px;
+    font-size: 16px;
+
+    @media #{$mobile} {
+        margin-bottom: 30px;
+    }
+}
+// -- page-header
