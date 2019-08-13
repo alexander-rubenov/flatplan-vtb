@@ -22,6 +22,13 @@ ul {
     list-style: none;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+
+    vertical-align: middle;
+}
+
 // wrapper
 .wrapper {
     max-width: 1170px;
@@ -38,6 +45,11 @@ ul {
 // -- wrapper
 
 // button
+button {
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
 .button {
     display: block;
     width: 135px;
@@ -345,6 +357,7 @@ ul {
 .banner {
     background: rgba(29, 74, 215, 0.9) url('../img/background-banner.jpg') no-repeat center center;
     background-size: cover;
+    margin-bottom: 80px;
 }
 
 .banner__wrapper {
@@ -404,39 +417,81 @@ ul {
 // -- banner
 
 // consultation-with-designer
-.consultation-with-designer__list {
-    max-width: 1170px;
+.consultation-with-designer__wrapper {
+    padding: 0 20px;
+}
+
+.consultation-with-designer__header {
+    margin-bottom: 20px;
+}
+
+.consultation-with-designer__text-content {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-size: 18px;
+    text-align: center;
+    opacity: 0.4;
+    padding: 0 170px;
+
+    @media (max-width: 800px) {
+        padding: 0;
+    }
+}
+
+.consultation-with-designer__gallery {
     display: grid;
-    grid-gap: 20px;
-    grid-template-areas: "image-1 image-3 image-4"
-                         "image-2 image-3 image-5";
     grid-template-columns: 1fr 2fr 1fr;
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
 }
 
-.consultation-with-designer__item-1 {
-    grid-area: image-1;
-}
+.consultation-with-designer__left-section,
+.consultation-with-designer__right-section {
+    @media (max-width: 800px) {
+        display: flex;
 
-.consultation-with-designer__item-2 {
-    grid-area: image-2;
-}
-
-.consultation-with-designer__item-3 {
-    grid-area: image-3;
-}
-
-.consultation-with-designer__item-4 {
-    grid-area: image-4;
-}
-
-.consultation-with-designer__item-5 {
-    grid-area: image-5;
+    }
 }
 
 .consultation-with-designer__image {
-    max-width: 100%;
-    height: auto;
+    border-radius: 3px;
+    border: 3px solid transparent;
 
-    vertical-align: middle;
+    &:hover, &:focus {
+        border-color: $blue;
+    }
 }
 
+.consultation-with-designer__main-section {
+    background: #ffffff url('../img/consultation-with-designer-3.jpg') no-repeat center center;
+    background-size: cover;
+    margin: 0 20px;
+    border-radius: 4px;
+    border: 3px solid transparent;
+
+    @media (max-width: 800px) {
+        margin: 0;
+    }
+}
+
+.consultation-with-designer__image-wrapper-first {
+    margin-bottom: 20px;
+
+    @media (max-width: 800px) {
+        margin-bottom: 0;
+    }
+}
+
+.consultation-with-designer__image-wrapper {
+    background: none;
+    border: none;
+    outline: none;
+
+    @media (max-width: 800px) {
+        width: 50%;
+    }
+}
+// -- consultation-with-designer
