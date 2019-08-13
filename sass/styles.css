@@ -54,6 +54,11 @@ ul {
   border: none;
 }
 
+.button--white {
+  background-color: #ffffff;
+  color: #404040;
+}
+
 .header {
   text-align: center;
   font-size: 48px;
@@ -72,19 +77,19 @@ ul {
   }
 }
 
-.header--h3 {
+.header--36px {
   font-size: 36px;
   text-align: left;
 }
 
 @media (max-width: 536px) {
-  .header--h3 {
+  .header--36px {
     font-size: 22px;
   }
 }
 
 @media (max-width: 320px) {
-  .header--h3 {
+  .header--36px {
     font-size: 18px;
   }
 }
@@ -276,17 +281,10 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 15px;
 }
 
-@media (max-width: 790px) {
-  .how-it-works__item {
-    margin-right: 0;
-  }
-}
-
-.how-it-works__item:last-child {
-  margin-right: 0;
+.how-it-works__item + .how-it-works__item {
+  margin-left: 15px;
 }
 
 .how-it-works__number-of-item {
@@ -429,5 +427,92 @@ ul {
 
 .what-you-get__button {
   width: 195px;
+}
+
+.banner {
+  background: rgba(29, 74, 215, 0.9) url("../img/background-banner.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.banner__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 88px 20px;
+}
+
+@media (max-width: 1024px) {
+  .banner__wrapper {
+    padding: 55px 20px;
+  }
+}
+
+@media (max-width: 980px) {
+  .banner__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (max-width: 536px) {
+  .banner__wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.banner__header {
+  color: #ffffff;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 50px;
+}
+
+@media (max-width: 980px) {
+  .banner__header {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+}
+
+.banner__button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner__button {
+  min-width: 140px;
+  height: 60px;
+  font-size: 24px;
+  margin-right: 25px;
+}
+
+@media (max-width: 536px) {
+  .banner__button {
+    font-size: 22px;
+    width: 135px;
+    height: 50px;
+  }
+}
+
+.banner__price {
+  font-size: 36px;
+  color: #ffffff;
 }
 /*# sourceMappingURL=styles.css.map */
