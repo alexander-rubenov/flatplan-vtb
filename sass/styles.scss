@@ -401,3 +401,42 @@ ul {
     font-size: 36px;
     color: #ffffff;
 }
+// -- banner
+
+// consultation-with-designer
+.consultation-with-designer__list {
+    max-width: 1170px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "image-1 image-3 image-4"
+                         "image-2 image-3 image-5";
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.consultation-with-designer__item-1 {
+    grid-area: image-1;
+}
+
+.consultation-with-designer__item-2 {
+    grid-area: image-2;
+}
+
+.consultation-with-designer__item-3 {
+    grid-area: image-3;
+}
+
+.consultation-with-designer__item-4 {
+    grid-area: image-4;
+}
+
+.consultation-with-designer__item-5 {
+    grid-area: image-5;
+}
+
+.consultation-with-designer__image {
+    max-width: 100%;
+    height: auto;
+
+    vertical-align: middle;
+}
+
