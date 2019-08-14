@@ -47,7 +47,15 @@ window.onload = () => {
 
 swiperList.style.marginLeft = '0px';
 
+let peremennaya = false;
+
 function swipe(event) {
+    peremennaya = false;
+    swiper.addEventListener('mouseup', swipeMouseMoveOff);
+
+    if (peremennaya) return;
+
+    let firstCursorPosition = event.pageX;
 
     let
         initialCursorPosition = event.pageX,
@@ -64,7 +72,10 @@ function swipe(event) {
             swipeDistance = Math.abs(initialCursorPosition - newCursorPosition);
 
         swipeListMarginLeft = parseInt(swiperList.style.marginLeft);
-        wayToWhichSwipeIsMade = (newCursorPosition < initialCursorPosition) ? 'left' : 'right';
+
+        if (newCursorPosition < initialCursorPosition) wayToWhichSwipeIsMade = 'left';
+        else if (newCursorPosition > initialCursorPosition) wayToWhichSwipeIsMade = 'right';
+        else if (newCursorPosition = initialCursorPosition) wayToWhichSwipeIsMade = wayToWhichSwipeIsMade;
         
         switch(wayToWhichSwipeIsMade) {
             case 'left':
@@ -83,34 +94,52 @@ function swipe(event) {
         initialCursorPosition = newCursorPosition;
     }
 
-
-    function swipeMouseMoveOff() {
+    function swipeMouseMoveOff(event) {
         swiper.removeEventListener('mousemove', swipeMouseMoveOn);
+        // peremennaya = true;
 
         isFastSwipe = (summSwipeDistance >= 100) ? true : false;
         if (!isFastSwipe) return;
+        
+        let additionalSwipeDistance = (summSwipeDistance / 2.5);
+
+
+        let lastCursorPosition = event.pageX;
+        wayToWhichSwipeIsMade = (lastCursorPosition < firstCursorPosition) ? 'left' : 'right';
+
+        console.log(`lastCursorPosition ${lastCursorPosition}`);
+        console.log(`firstCursorPosition ${firstCursorPosition}`);
+
+
+        swipeListMarginLeft = parseInt(swiperList.style.marginLeft);
 
         switch(wayToWhichSwipeIsMade) {
             case 'left':
 
                 if (-swipeListMarginLeft >= swiperListWidth) return;
+                
+                additionalSwipeDistance = (additionalSwipeDistance > (swiperListWidth + swipeListMarginLeft)) ? (swiperListWidth - -swipeListMarginLeft) : additionalSwipeDistance;
+
                 swiperList.style.transition = 'all 0.25s';
-                swiperList.style.marginLeft = `${swipeListMarginLeft - (summSwipeDistance / 2.5)}px`;
+                swiperList.style.marginLeft = `${swipeListMarginLeft - additionalSwipeDistance}px`;
                 break;
 
             case 'right':
                 
                 if (swipeListMarginLeft >= 0 ) return;
                 swiperList.style.transition = 'all 0.25s';
-                swiperList.style.marginLeft = `${swipeListMarginLeft + (summSwipeDistance / 2.5)}px`;
+                swiperList.style.marginLeft = `${swipeListMarginLeft + additionalSwipeDistance}px`;
         }
 
         setTimeout(() => {
             swiperList.style.transition = 'all 0s';
         }, 250);
+        
+        swiper.removeEventListener('mouseup', swipeMouseMoveOff);
+
     }
 
-    swiper.addEventListener('mouseup', swipeMouseMoveOff);
+
 }
 
 swiper.addEventListener('mousedown', swipe);
