@@ -1,16 +1,6 @@
 'use strict';
 
 let
-    clientHeight = document.documentElement.clientHeight,
-    clientWidth = document.documentElement.clientWidth,
-    pageHeader = document.querySelector('.page-header');
-
-// if (clientWidth <= 536) {
-//     pageHeader.style.height = clientHeight;
-// }
-
-
-let
     imageGallery = document.querySelector('.consultation-with-designer__gallery'),
     mainScreenImage = document.querySelector('.consultation-with-designer__main-section');
 

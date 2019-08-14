@@ -44,13 +44,14 @@ img {
 
 // button
 button {
+    font-family: 'VTBGroup', sans-serif;
     cursor: pointer;
     transition: all 0.25s;
 }
 
 .button {
     display: block;
-    width: 135px;
+    min-width: 135px;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -129,13 +130,9 @@ button {
 
 // introduction
 .introduction {
-    width: 100%;
+    min-width: 100%;
     background: #ffffff url('../img/background-introduction.png') no-repeat center center;
     background-size: cover;
-
-    @media #{$tablet} {
-        height: 100vh;
-    }
 }
 
 .introduction__wrapper {
@@ -152,21 +149,15 @@ button {
 }
 
 .introduction__logos {
-    width: 245px;
+    min-width: 245px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
 
     @media #{$mobile} {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         flex-direction: column;
-    }
-}
-
-.introduction__logo-vtb {
-    @media #{$mobile} {
-        margin-bottom: 15px;
     }
 }
 
@@ -199,7 +190,7 @@ button {
     margin-bottom: 10px;
 
     @media #{$tablet} {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
 }
 
@@ -265,8 +256,8 @@ button {
 
 .how-it-works__number-of-item {
     font-family: 'Formular', sans-serif;
-    width: 110px;
-    height: 110px;
+    min-width: 110px;
+    min-height: 110px;
     position: relative;
     background-color: #f4f7fc;
     display: flex;
@@ -285,10 +276,10 @@ button {
 }
 
 .how-it-works__first-item-description {
-    width: 135px;
+    max-width: 135px;
 
     @media (max-width: 790px) {
-        width: 250px;
+        max-width: 250px;
     }
 }
 
@@ -376,7 +367,7 @@ button {
 }
 
 .what-you-get__button {
-    width: 195px;
+    min-width: 195px;
 }
 // -- what-you-get
 
@@ -436,7 +427,7 @@ button {
 
     @media #{$tablet} {
         font-size: 22px;
-        width: 135px;
+        min-width: 135px;
         height: 50px;
     }
 }
@@ -531,7 +522,7 @@ button {
     outline: none;
 
     @media (max-width: 800px) {
-        width: 50%;
+        min-width: 50%;
     }
 }
 // -- consultation-with-designer
