@@ -10,9 +10,9 @@ if (clientWidth <= 536) {
 }
 
 
-
-let imageGallery = document.querySelector('.consultation-with-designer__gallery');
-let mainScreenImage = document.querySelector('.consultation-with-designer__main-section');
+let
+    imageGallery = document.querySelector('.consultation-with-designer__gallery'),
+    mainScreenImage = document.querySelector('.consultation-with-designer__main-section');
 
 
 function changeMainScreenImage(event) {
@@ -34,26 +34,24 @@ imageGallery.addEventListener('click', changeMainScreenImage);
 
 
 
-let swiper = document.querySelector('.other-services__swiper');
-let swiperList = document.querySelector('.other-services__list');
-let swiperListWidth = parseInt(getComputedStyle(swiperList).width);
+let
+    swiper = document.querySelector('.other-services__swiper'),
+    swiperList = document.querySelector('.other-services__list'),
+    swiperListWidth = parseInt(getComputedStyle(swiperList).width);
 
 
 window.onload = () => {
-    let heightOfSwiper  = getComputedStyle(swiper).height;
+    let heightOfSwiper = getComputedStyle(swiper).height;
     swiper.style.height = `${parseInt(heightOfSwiper) + 40}px`;
 }
 
 
 swiperList.style.marginLeft = '0px';
 
-let peremennaya = false;
 
-function swipe(event) {
-    peremennaya = false;
+function swipe(event) {    
+
     swiper.addEventListener('mouseup', swipeMouseMoveOff);
-
-    if (peremennaya) return;
 
     let firstCursorPosition = event.pageX;
 
@@ -67,6 +65,7 @@ function swipe(event) {
     swiper.addEventListener('mousemove', swipeMouseMoveOn);
 
     function swipeMouseMoveOn(event) {
+
         let
             newCursorPosition = event.pageX,
             swipeDistance = Math.abs(initialCursorPosition - newCursorPosition);
@@ -96,7 +95,6 @@ function swipe(event) {
 
     function swipeMouseMoveOff(event) {
         swiper.removeEventListener('mousemove', swipeMouseMoveOn);
-        // peremennaya = true;
 
         isFastSwipe = (summSwipeDistance >= 100) ? true : false;
         if (!isFastSwipe) return;
@@ -106,10 +104,6 @@ function swipe(event) {
 
         let lastCursorPosition = event.pageX;
         wayToWhichSwipeIsMade = (lastCursorPosition < firstCursorPosition) ? 'left' : 'right';
-
-        console.log(`lastCursorPosition ${lastCursorPosition}`);
-        console.log(`firstCursorPosition ${firstCursorPosition}`);
-
 
         swipeListMarginLeft = parseInt(swiperList.style.marginLeft);
 
@@ -136,10 +130,21 @@ function swipe(event) {
         }, 250);
         
         swiper.removeEventListener('mouseup', swipeMouseMoveOff);
-
     }
-
-
 }
 
+
+// function switchOnSwiper() {
+//     swiper.addEventListener('mousedown', swipe);
+// }
+
+// function switchOffSwiper() {
+//     swiper.removeEventListener('mousedown', swipe);
+//     swiper.removeEventListener('mousemove', swipeMouseMoveOn);
+// }
+
+
 swiper.addEventListener('mousedown', swipe);
+
+// swiper.addEventListener('mouseover', switchOnSwiper);
+// swiper.addEventListener('mouseout', switchOffSwiper);
