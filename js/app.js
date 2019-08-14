@@ -29,3 +29,88 @@ function changeMainScreenImage(event) {
 }
 
 imageGallery.addEventListener('click', changeMainScreenImage);
+
+
+
+
+
+let swiper = document.querySelector('.other-services__swiper');
+let swiperList = document.querySelector('.other-services__list');
+let swiperListWidth = parseInt(getComputedStyle(swiperList).width);
+
+
+window.onload = () => {
+    let heightOfSwiper  = getComputedStyle(swiper).height;
+    swiper.style.height = `${parseInt(heightOfSwiper) + 40}px`;
+}
+
+
+swiperList.style.marginLeft = '0px';
+
+function swipe(event) {
+
+    let
+        initialCursorPosition = event.pageX,
+        summSwipeDistance = 0,
+        wayToWhichSwipeIsMade,
+        swipeListMarginLeft,
+        isFastSwipe = false;
+
+    swiper.addEventListener('mousemove', swipeMouseMoveOn);
+
+    function swipeMouseMoveOn(event) {
+        let
+            newCursorPosition = event.pageX,
+            swipeDistance = Math.abs(initialCursorPosition - newCursorPosition);
+
+        swipeListMarginLeft = parseInt(swiperList.style.marginLeft);
+        wayToWhichSwipeIsMade = (newCursorPosition < initialCursorPosition) ? 'left' : 'right';
+        
+        switch(wayToWhichSwipeIsMade) {
+            case 'left':
+
+                if (-swipeListMarginLeft >= swiperListWidth) return;
+                swiperList.style.marginLeft = `${swipeListMarginLeft - swipeDistance}px`;
+                break;
+
+            case 'right':
+                
+                if (swipeListMarginLeft >= 0 ) return;
+                swiperList.style.marginLeft = `${swipeListMarginLeft + swipeDistance}px`;
+        }
+
+        summSwipeDistance += swipeDistance;
+        initialCursorPosition = newCursorPosition;
+    }
+
+
+    function swipeMouseMoveOff() {
+        swiper.removeEventListener('mousemove', swipeMouseMoveOn);
+
+        isFastSwipe = (summSwipeDistance >= 100) ? true : false;
+        if (!isFastSwipe) return;
+
+        switch(wayToWhichSwipeIsMade) {
+            case 'left':
+
+                if (-swipeListMarginLeft >= swiperListWidth) return;
+                swiperList.style.transition = 'all 0.25s';
+                swiperList.style.marginLeft = `${swipeListMarginLeft - (summSwipeDistance / 2.5)}px`;
+                break;
+
+            case 'right':
+                
+                if (swipeListMarginLeft >= 0 ) return;
+                swiperList.style.transition = 'all 0.25s';
+                swiperList.style.marginLeft = `${swipeListMarginLeft + (summSwipeDistance / 2.5)}px`;
+        }
+
+        setTimeout(() => {
+            swiperList.style.transition = 'all 0s';
+        }, 250);
+    }
+
+    swiper.addEventListener('mouseup', swipeMouseMoveOff);
+}
+
+swiper.addEventListener('mousedown', swipe);

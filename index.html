@@ -10,56 +10,88 @@
 </head>
 <body>
 
-    <header class="page-header">
-        <div class="wrapper page-header__wrapper">
-            <div class="page-header__logos">
-                <object class="page-header__logo-vtb" data="img/logo-vtb.svg" type="image/svg+xml"></object>
-                <span class="page-header__plus-sign">+</span>
-                <object class="page-header__logo-flatplan" data="img/logo-flatplan.svg" type="image/svg+xml"></object>
+    <section class="introduction">
+        <div class="wrapper introduction__wrapper">
+            <div class="introduction__logos">
+                <object class="introduction__logo-vtb" data="img/logo-vtb.svg" type="image/svg+xml"></object>
+                <span class="introduction__plus-sign">
+                    +
+                </span>
+                <object class="introduction__logo-flatplan" data="img/logo-flatplan.svg" type="image/svg+xml"></object>
             </div>
 
-            <div class="page-header__text-content">
-                <span class="page-header__title">Ремонт</span>
-                <h1 class="page-header__header header">Упрощаем ремонт</h1>
-                <p class="page-header__description">Спроектируем, спланируем и проконтролируем ремонт вашей квартиры</p>
-                <button class="button">
+            <div class="introduction__text-content">
+                <span class="introduction__subtitle">
+                    Ремонт
+                </span>
+                <h1 class="introduction__title title">
+                    Упрощаем ремонт
+                </h1>
+                <p class="introduction__description">
+                    Спроектируем, спланируем и проконтролируем ремонт вашей квартиры
+                </p>
+                <button class="button button--blue" type="button" title="Узнать подробнее как это работает">
                     Подробнее
                 </button>
             </div>
         </div>
-    </header>
+    </section>
 
     <main class="page-main" role="main">
         <section class="how-it-works">
             <div class="wrapper how-it-works__wrapper">
-                <h2 class="header how-it-works__header">
+                <h2 class="title how-it-works__title">
                     Как это работает?
                 </h2>
                 <ul class="how-it-works__list">
                     <li class="how-it-works__item">
-                        <div class="how-it-works__number-of-item">1</div>
-                        <p class="how-it-works__item-description how-it-works__first-item-description">Оплатите услугу и оставьте свои контакты</p>
+                        <div class="how-it-works__number-of-item">
+                            <span>
+                                1
+                            </span>
+                        </div>
+                        <p class="how-it-works__item-description how-it-works__first-item-description">
+                            Оплатите услугу и оставьте свои контакты
+                        </p>
                     </li>
                     <li class="how-it-works__right-arrow">
                         <object data="img/right-arrow.svg" type="image/svg+xml"></object>
                     </li>
                     <li class="how-it-works__item">
-                        <div class="how-it-works__number-of-item how-it-works__arrow-right">2</div>
-                        <p class="how-it-works__item-description">Наш менеджер свяжется с вами для назначения встречи с дизайнером</p>
+                        <div class="how-it-works__number-of-item how-it-works__arrow-right">
+                            <span>
+                                2
+                            </span>
+                        </div>
+                        <p class="how-it-works__item-description">
+                            Наш менеджер свяжется с вами для назначения встречи с дизайнером
+                        </p>
                     </li>
                     <li class="how-it-works__right-arrow">
                         <object data="img/right-arrow.svg" type="image/svg+xml"></object>
                     </li>
                     <li class="how-it-works__item">
-                        <div class="how-it-works__number-of-item how-it-works__arrow-right">3</div>
-                        <p class="how-it-works__item-description">Дизайнер делает замеры и проводит консультацию</p>
+                        <div class="how-it-works__number-of-item how-it-works__arrow-right">
+                            <span>
+                                3
+                            </span>
+                        </div>
+                        <p class="how-it-works__item-description">
+                            Дизайнер делает замеры и проводит консультацию
+                        </p>
                     </li>
                     <li class="how-it-works__right-arrow">
                         <object data="img/right-arrow.svg" type="image/svg+xml"></object>
                     </li>
                     <li class="how-it-works__item">
-                        <div class="how-it-works__number-of-item how-it-works__arrow-right">4</div>
-                        <p class="how-it-works__item-description">Через 2 дня вы получаете обмерный план и расстановку мебели</p>
+                        <div class="how-it-works__number-of-item how-it-works__arrow-right">
+                            <span>
+                                4
+                            </span>
+                        </div>
+                        <p class="how-it-works__item-description">
+                            Через 2 дня вы получаете обмерный план и расстановку мебели
+                        </p>
                     </li>
                 </ul>
             </div>
@@ -67,35 +99,53 @@
 
         <section class="what-you-get">
             <div class="wrapper what-you-get__wrapper">
-                <h2 class="what-you-get__header header">Что вы получите?</h2>
+                <h2 class="what-you-get__title title">
+                    Что вы получите?
+                </h2>
                 <ul class="what-you-get__list">
                     <li class="what-you-get__item">
                         <div class="what-you-get__image-wrapper">
-                            <img class="what-you-get__image" src="img/quick-departure.jpg" alt="Быстрый выезд">
+                            <img class="what-you-get__image" src="img/quick-departure.jpg" alt="Изображение: Услуги - Быстрый выезд">
                         </div>
                         <div class="what-you-get__text-content">
-                            <h3 class="header header--36px what-you-get__item-header">Быстрый выезд</h3>
-                            <p class="what-you-get__item-description">После получения заявки мы свяжемся с вами и назначим встречу с дизайнером в тот же или на следующий день</p>
+                            <h3 class="title title--36px what-you-get__item-title">
+                                Быстрый выезд
+                            </h3>
+                            <p class="what-you-get__item-description">
+                                После получения заявки мы свяжемся с вами и назначим встречу с дизайнером в тот же или на следующий день
+                            </p>
                         </div>
                     </li>
                     <li class="what-you-get__item">
                         <div class="what-you-get__text-content">
-                            <h3 class="header header--36px what-you-get__item-header">План расстановки мебели</h3>
-                            <p class="what-you-get__item-description">План расстановки мебели подскажет как грамотно сформировать пространство и ответит на вопрос как удобно и эргономично расположить светильники, мебель, шкафы и кухню</p>
-                            <button class="button what-you-get__button">Посмотреть пример</button>
+                            <h3 class="title title--36px what-you-get__item-title">
+                                План расстановки мебели
+                            </h3>
+                            <p class="what-you-get__item-description">
+                                План расстановки мебели подскажет как грамотно сформировать пространство и ответит на вопрос как удобно и эргономично расположить светильники, мебель, шкафы и кухню
+                            </p>
+                            <button class="button button--blue what-you-get__button" type="button" title="Посмотреть пример плана расстановки мебели">
+                                Посмотреть пример
+                            </button>
                         </div>
                         <div class="what-you-get__image-wrapper">
-                            <img class="what-you-get__image" src="img/plan-of-arrangement-of-furniture.jpg" alt="План расстановки мебели">
+                            <img class="what-you-get__image" src="img/plan-of-arrangement-of-furniture.jpg" alt="Изображение: Услуги - План расстановки мебели">
                         </div>
                     </li>
                     <li class="what-you-get__item">
                         <div class="what-you-get__image-wrapper">
-                            <img class="what-you-get__image" src="img/measurement-plan.jpg" alt="Обмерный план">
+                            <img class="what-you-get__image" src="img/measurement-plan.jpg" alt="Изображение: Услуги - Обмерный план">
                         </div>
                         <div class="what-you-get__text-content">
-                            <h3 class="header header--36px what-you-get__item-header">Обмерный план</h3>
-                            <p class="what-you-get__item-description">Это один из самых важных этапов. Правильно выполненные замеры позволят избежать сложностей при планировании ремонта и зафиксировать все необходимые детали о вашей квартире</p>
-                            <button class="button what-you-get__button">Посмотреть пример</button>
+                            <h3 class="title title--36px what-you-get__item-title">
+                                Обмерный план
+                            </h3>
+                            <p class="what-you-get__item-description">
+                                Это один из самых важных этапов. Правильно выполненные замеры позволят избежать сложностей при планировании ремонта и зафиксировать все необходимые детали о вашей квартире
+                            </p>
+                            <button class="button button--blue what-you-get__button" type="button" title="Посмотреть пример обмерного плана">
+                                Посмотреть пример
+                            </button>
                         </div>
                     </li>
                 </ul>
@@ -104,35 +154,45 @@
 
         <section class="banner">
             <div class="wrapper banner__wrapper">
-                <h2 class="header header--36px banner__header">Обмерный план, расстановка мебели и консультация дизайнера</h2>
+                <h2 class="title title--36px banner__title">
+                    Обмерный план, расстановка мебели и консультация дизайнера
+                </h2>
                 <div class="banner__button-wrapper">
-                    <button class="button button--white banner__button">Купить</button>
-                    <span class="banner__price">5000₽</span>
+                    <button class="button button--white banner__button" type="button" title="Купить пакет из трех услуг">
+                        Купить
+                    </button>
+                    <span class="banner__price">
+                        5000₽
+                    </span>
                 </div>
             </div>
         </section>
 
         <section class="consultation-with-designer">
             <div class="consultation-with-designer__wrapper wrapper">
-                <h2 class="header consultation-with-designer__header">Консультация с дизайнером</h2>
-                <p class="consultation-with-designer__text-content">Во время замеров наш дизайнер ответит на все вопросы и поможет выбрать интерьер вашей будущей квартиры. Мы уже создали больше 100 концепций, среди которых вам точно что-то понравится.</p>
+                <h2 class="title consultation-with-designer__title">
+                    Консультация с дизайнером
+                </h2>
+                <p class="consultation-with-designer__text-content">
+                    Во время замеров наш дизайнер ответит на все вопросы и поможет выбрать интерьер вашей будущей квартиры. Мы уже создали больше 100 концепций, среди которых вам точно что-то понравится.
+                </p>
                 <div class="consultation-with-designer__gallery">
 
                     <div class="consultation-with-designer__left-section">
-                        <button class="consultation-with-designer__image-wrapper consultation-with-designer__image-wrapper-first">
+                        <button class="consultation-with-designer__image-wrapper consultation-with-designer__image-wrapper-first" type="button">
                             <img class="consultation-with-designer__image" src="img/consultation-with-designer-1.jpg" alt="Изображение интерьера вашей будущей квартиры">
                         </button>
-                        <button class="consultation-with-designer__image-wrapper">
+                        <button class="consultation-with-designer__image-wrapper" type="button">
                             <img class="consultation-with-designer__image" src="img/consultation-with-designer-2.jpg" alt="Изображение интерьера вашей будущей квартиры">
                         </button>
                     </div>
                     <div class="consultation-with-designer__main-section">
                     </div>
                     <div class="consultation-with-designer__right-section">
-                        <button class="consultation-with-designer__image-wrapper consultation-with-designer__image-wrapper-first">
+                        <button class="consultation-with-designer__image-wrapper consultation-with-designer__image-wrapper-first" type="button">
                             <img class="consultation-with-designer__image" src="img/consultation-with-designer-4.jpg" alt="Изображение интерьера вашей будущей квартиры">
                         </button>
-                        <button class="consultation-with-designer__image-wrapper">
+                        <button class="consultation-with-designer__image-wrapper" type="button">
                             <img class="consultation-with-designer__image" src="img/consultation-with-designer-5.jpg" alt="Изображение интерьера вашей будущей квартиры">
                         </button>
                     </div>
@@ -141,7 +201,93 @@
             </div>
         </section>
 
+        <section class="other-services">
+            <div class="wrapper other-services__wrapper">
+                <h2 class="other-services__title title">
+                    Другие услуги
+                </h2>
+                <div class="other-services__swiper">
+                    <ul class="other-services__list">
+                        <li class="other-services__item">
+                            <img class="other-services__image" src="img/other-services-1.jpg" alt="Изображение: Услуги - Базовый электропроект" draggable="false">
+                            <div class="other-services__text-content">
+                                <h3 class="other-services__title">
+                                    Базовый электропроект
+                                </h3>
+                                <p class="other-services__description">
+                                    План подключения всех электроприборов и список электрофурнитуры, необходимой для электрощита
+                                </p>
+                            </div>
+                        </li>
+                        <li class="other-services__item">
+                            <img class="other-services__image" src="img/other-services-2.jpg" alt="Изображение: Услуги - Закупка черновых материалов у партнеров" draggable="false">
+                            <div class="other-services__text-content">
+                                <h3 class="other-services__title">
+                                    Закупка черновых материалов у партнеров
+                                </h3>
+                                <p class="other-services__description">
+                                    Эксперт составит подробный список черновых материалов, подготовит смету и согласует с вами бюджет
+                                </p>
+                            </div>
+                        </li>
+                        <li class="other-services__item">
+                            <img class="other-services__image" src="img/other-services-3.jpg" alt="Изображение: Услуги - Подбор чистовых материалов" draggable="false">
+                            <div class="other-services__text-content">
+                                <h3 class="other-services__title">
+                                    Подбор чистовых материалов
+                                </h3>
+                                <p class="other-services__description">
+                                    Подбор чистовых материалов  позволит сэкономить время на поиски подходящих элементов в рамках вашего бюджета
+                                </p>
+                            </div>
+                        </li>
+                        <li class="other-services__item">
+                            <img class="other-services__image" src="img/other-services-1.jpg" alt="Изображение: Услуги - Дизайн-проект интерьера" draggable="false">
+                            <div class="other-services__text-content">
+                                <h3 class="other-services__title">
+                                    Дизайн-проект интерьера
+                                </h3>
+                                <p class="other-services__description">
+                                    Весь комплект чертежей и 2 списка материалов и мебели с ценами и артикулами на разный бюджет
+                                </p>
+                            </div>
+                        </li>
+                        <li class="other-services__item">
+                            <img class="other-services__image" src="img/other-services-1.jpg" alt="Изображение: Услуги - Дизайн-проект интерьера" draggable="false">
+                            <div class="other-services__text-content">
+                                <h3 class="other-services__title">
+                                    Дизайн-проект интерьера
+                                </h3>
+                                <p class="other-services__description">
+                                    Весь комплект чертежей и 2 списка материалов и мебели с ценами и артикулами на разный бюджет
+                                </p>
+                            </div>
+                        </li>
+                        <li class="other-services__item">
+                            <img class="other-services__image" src="img/other-services-1.jpg" alt="Изображение: Услуги - Базовый электропроект" draggable="false">
+                            <div class="other-services__text-content">
+                                <h3 class="other-services__title">
+                                    Базовый электропроект
+                                </h3>
+                                <p class="other-services__description">
+                                    План подключения всех электроприборов и список электрофурнитуры, необходимой для электрощита
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    <footer class="page-footer">
+        <div class="footer__wrapper wrapper">
+            <p class="footer__address">
+                119180, г. Москва, ул. Краснопролетарская, д. 16 стр.1
+            </p>
+        </div>
+    </footer>
 
 
     <script src="js/app.js"></script>

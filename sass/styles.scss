@@ -14,8 +14,6 @@ $full-desktop: (max-width: 1400px);
 body {
     font-family: 'VTBGroup', sans-serif;
     font-size: 16px;
-
-    height: 5000px;
 }
 
 ul {
@@ -57,23 +55,42 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $blue;
     text-decoration: none;
-    color: #ffffff;
     border-radius: 4px;
     font-size: 16px;
     outline: none;
     border: none;
 }
 
+.button--blue {
+    background-color: $blue;
+    color: #ffffff;
+    transition: background-color 0.3s,
+                color 0.3s;
+
+    &:hover, &:focus {
+        background-color: #ffffff;
+        color: $blue;
+        border: 2px solid $blue;
+    }
+}
+
 .button--white {
     background-color: #ffffff;
     color: #404040;
+    transition: background-color 0.3s,
+                color 0.3s;
+
+    &:hover, &:focus {
+        background-color: $blue;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+    }
 }
 // -- button
 
-// header
-.header {
+// title
+.title {
     text-align: center;
     font-size: 48px;
     color: #404040;
@@ -87,7 +104,7 @@ button {
     }
 }
 
-.header--36px {
+.title--36px {
     font-size: 36px;
     text-align: left;
 
@@ -99,12 +116,12 @@ button {
         font-size: 18px;
     }
 }
-// --header
+// --title
 
-// page-header
-.page-header {
+// introduction
+.introduction {
     width: 100%;
-    background: #ffffff url('../img/background-header.png') no-repeat center center;
+    background: #ffffff url('../img/background-introduction.png') no-repeat center center;
     background-size: cover;
 
     @media #{$tablet} {
@@ -112,7 +129,7 @@ button {
     }
 }
 
-.page-header__wrapper {
+.introduction__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,7 +142,7 @@ button {
     }
 }
 
-.page-header__logos {
+.introduction__logos {
     width: 245px;
     display: flex;
     justify-content: space-between;
@@ -138,13 +155,13 @@ button {
     }
 }
 
-.page-header__logo-vtb {
+.introduction__logo-vtb {
     @media #{$mobile} {
         margin-bottom: 15px;
     }
 }
 
-.page-header__plus-sign {
+.introduction__plus-sign {
     font-size: 25px;
     font-weight: bold;
 
@@ -153,13 +170,13 @@ button {
     }
 }
 
-.page-header__text-content {
+.introduction__text-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.page-header__title {
+.introduction__subtitle {
     margin-bottom: 10px;
     opacity: 0.3;
     font-size: 16px;
@@ -169,7 +186,7 @@ button {
     }
 }
 
-.page-header__header {
+.introduction__title {
     margin-bottom: 10px;
 
     @media #{$tablet} {
@@ -177,7 +194,7 @@ button {
     }
 }
 
-.page-header__description {
+.introduction__description {
     text-align: center;
     opacity: 0.5;
     margin-bottom: 51px;
@@ -187,7 +204,7 @@ button {
         margin-bottom: 100px;
     }
 }
-// -- page-header
+// -- introduction
 
 .page-main {
     padding-top: 80px;
@@ -210,7 +227,7 @@ button {
     padding: 0 15px;
 }
 
-.how-it-works__header {
+.how-it-works__title {
     margin-bottom: 42px;
 }
 
@@ -281,7 +298,7 @@ button {
     padding: 0 20px;
 }
 
-.what-you-get__header {
+.what-you-get__title {
     margin-bottom: 40px;
 }
 
@@ -339,7 +356,7 @@ button {
     }
 }
 
-.what-you-get__item-header {
+.what-you-get__item-title {
     margin-bottom: 10px;
 }
 
@@ -381,7 +398,7 @@ button {
     }
 }
 
-.banner__header {
+.banner__title {
     color: #ffffff;
     flex-grow: 1;
     margin-right: 50px;
@@ -417,11 +434,15 @@ button {
 // -- banner
 
 // consultation-with-designer
+.consultation-with-designer {
+    margin-bottom: 80px;
+}
+
 .consultation-with-designer__wrapper {
     padding: 0 20px;
 }
 
-.consultation-with-designer__header {
+.consultation-with-designer__title {
     margin-bottom: 20px;
 }
 
@@ -495,3 +516,53 @@ button {
     }
 }
 // -- consultation-with-designer
+
+// other-devices
+.other-services {
+    margin-bottom: 20px;
+}
+
+.other-services__swiper {
+    overflow-x: hidden;
+    // padding: 0 40px;
+    padding-top: 40px;
+
+    @media #{$desktop} {
+        overflow: auto;
+    }
+}
+
+.other-services__list {
+    display: flex;
+    padding: 0 40px;
+}
+
+.other-services__item {
+    min-width: 340px;
+    display: inline-block;
+    user-select: none;
+    margin-right: 40px;
+
+    box-shadow: 0px 0px 40px rgba(159, 172, 211, 0.4);
+}
+
+.other-services__text-content {
+    pointer-events: none;
+    padding: 30px 20px;
+    padding-bottom: 50px;
+}
+// -- other-services
+
+// footer
+.page-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+// -- footer
