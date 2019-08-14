@@ -103,9 +103,9 @@ function swipe(event) {
         isFastSwipe = (summSwipeDistance >= 100) ? true : false;
         if (!isFastSwipe) return;
 
-        summSwipeDistance = (summSwipeDistance > swiperListWidth) ? swiperListWidth : summSwipeDistance;
+        summSwipeDistance = (summSwipeDistance > (swiperListWidth - swiperWidth)) ? (swiperListWidth - swiperWidth) : summSwipeDistance;
         
-        let additionalSwipeDistance = (summSwipeDistance / 2.5);
+        let additionalSwipeDistance = (summSwipeDistance / 1.5); // <---- change swipe speed, for example: (summSwipeDistance / 2.5)
 
 
         let lastCursorPosition = event.pageX;
@@ -118,7 +118,7 @@ function swipe(event) {
 
                 if (-swipeListMarginLeft >= (swiperListWidth - swiperWidth)) return;
                 
-                additionalSwipeDistance = (additionalSwipeDistance > (swiperListWidth + swipeListMarginLeft)) ? (swiperListWidth + swipeListMarginLeft) : additionalSwipeDistance;
+                additionalSwipeDistance = (additionalSwipeDistance > ((swiperListWidth - swiperWidth) + swipeListMarginLeft)) ? ((swiperListWidth - swiperWidth) + swipeListMarginLeft) : additionalSwipeDistance;
 
                 swiperList.style.transition = 'all 0.25s';
                 swiperList.style.marginLeft = `${swipeListMarginLeft - additionalSwipeDistance}px`;
