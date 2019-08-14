@@ -32,11 +32,10 @@ imageGallery.addEventListener('click', changeMainScreenImage);
 
 
 
-
-
 let
     swiper = document.querySelector('.other-services__swiper'),
     swiperList = document.querySelector('.other-services__list'),
+    swiperWidth = parseInt(getComputedStyle(swiper).width),
     swiperListWidth = parseInt(getComputedStyle(swiperList).width);
 
 
@@ -49,13 +48,18 @@ window.onload = () => {
 swiperList.style.marginLeft = '0px';
 
 
-function swipe(event) {    
+function swipe(event) {
+
+    swiper.addEventListener('mouseleave', switchOffSwiper);
+
+    function switchOffSwiper() {
+        swiper.removeEventListener('mousemove', swipeMouseMoveOn);
+    }
 
     swiper.addEventListener('mouseup', swipeMouseMoveOff);
 
-    let firstCursorPosition = event.pageX;
-
     let
+        firstCursorPosition = event.pageX,
         initialCursorPosition = event.pageX,
         summSwipeDistance = 0,
         wayToWhichSwipeIsMade,
@@ -79,7 +83,7 @@ function swipe(event) {
         switch(wayToWhichSwipeIsMade) {
             case 'left':
 
-                if (-swipeListMarginLeft >= swiperListWidth) return;
+                if (-swipeListMarginLeft >= (swiperListWidth - swiperWidth)) return;
                 swiperList.style.marginLeft = `${swipeListMarginLeft - swipeDistance}px`;
                 break;
 
@@ -98,6 +102,8 @@ function swipe(event) {
 
         isFastSwipe = (summSwipeDistance >= 100) ? true : false;
         if (!isFastSwipe) return;
+
+        summSwipeDistance = (summSwipeDistance > swiperListWidth) ? swiperListWidth : summSwipeDistance;
         
         let additionalSwipeDistance = (summSwipeDistance / 2.5);
 
@@ -110,9 +116,9 @@ function swipe(event) {
         switch(wayToWhichSwipeIsMade) {
             case 'left':
 
-                if (-swipeListMarginLeft >= swiperListWidth) return;
+                if (-swipeListMarginLeft >= (swiperListWidth - swiperWidth)) return;
                 
-                additionalSwipeDistance = (additionalSwipeDistance > (swiperListWidth + swipeListMarginLeft)) ? (swiperListWidth - -swipeListMarginLeft) : additionalSwipeDistance;
+                additionalSwipeDistance = (additionalSwipeDistance > (swiperListWidth + swipeListMarginLeft)) ? (swiperListWidth + swipeListMarginLeft) : additionalSwipeDistance;
 
                 swiperList.style.transition = 'all 0.25s';
                 swiperList.style.marginLeft = `${swipeListMarginLeft - additionalSwipeDistance}px`;
@@ -121,6 +127,9 @@ function swipe(event) {
             case 'right':
                 
                 if (swipeListMarginLeft >= 0 ) return;
+
+                additionalSwipeDistance = (additionalSwipeDistance > -swipeListMarginLeft) ? -swipeListMarginLeft : additionalSwipeDistance;
+
                 swiperList.style.transition = 'all 0.25s';
                 swiperList.style.marginLeft = `${swipeListMarginLeft + additionalSwipeDistance}px`;
         }
@@ -134,17 +143,4 @@ function swipe(event) {
 }
 
 
-// function switchOnSwiper() {
-//     swiper.addEventListener('mousedown', swipe);
-// }
-
-// function switchOffSwiper() {
-//     swiper.removeEventListener('mousedown', swipe);
-//     swiper.removeEventListener('mousemove', swipeMouseMoveOn);
-// }
-
-
 swiper.addEventListener('mousedown', swipe);
-
-// swiper.addEventListener('mouseover', switchOnSwiper);
-// swiper.addEventListener('mouseout', switchOffSwiper);
