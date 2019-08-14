@@ -116,6 +116,15 @@ button {
         font-size: 18px;
     }
 }
+
+.title--21px {
+    font-size: 21px;
+    text-align: left;
+
+    @media #{$tablet} {
+        font-size: 19px;
+    }
+}
 // --title
 
 // introduction
@@ -376,6 +385,10 @@ button {
     background: rgba(29, 74, 215, 0.9) url('../img/background-banner.jpg') no-repeat center center;
     background-size: cover;
     margin-bottom: 80px;
+
+    @media #{$tablet} {
+        margin-bottom: 40px;
+    }
 }
 
 .banner__wrapper {
@@ -437,6 +450,10 @@ button {
 // consultation-with-designer
 .consultation-with-designer {
     margin-bottom: 80px;
+
+    @media #{$tablet} {
+        margin-bottom: 40px;
+    }
 }
 
 .consultation-with-designer__wrapper {
@@ -520,23 +537,31 @@ button {
 // -- consultation-with-designer
 
 // other-devices
+.other-services {
+    margin-bottom: 40px;
+
+    @media #{$tablet} {
+        margin-bottom: 20px;
+    }
+}
+
 .other-services__wrapper {
     padding: 0 20px;
     max-width: 1370px;
-}
 
-.other-services {
-    margin-bottom: 40px;
+    @media #{$desktop} {
+        padding: 0;
+    }
 }
 
 .other-services__swiper {
     user-select: none;
     overflow-x: hidden;
-    // padding: 0 40px;
     padding-top: 40px;
 
-    @media #{$desktop} {
+    @media (pointer: coarse) {
         overflow: auto;
+        user-select: auto;
     }
 }
 
@@ -553,6 +578,22 @@ button {
     border-radius: 15px;
 
     box-shadow: 0px 0px 40px rgba(159, 172, 211, 0.4);
+
+    @media #{$tablet} {
+        min-width: 290px;
+    }
+
+    @media (max-width: 350px) {
+        min-width: 250px;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.other-services__image {
+    border-radius: 15px 15px 0 0;
 }
 
 .other-services__text-content {
@@ -563,9 +604,11 @@ button {
 
 .other-services__title {
     max-width: 80%;
-    font-size: 21px;
-    color: #404040;
     margin-bottom: 20px;
+
+    @media #{$tablet} {
+        max-width: 100%;
+    }
 }
 
 .other-services__description {
@@ -584,5 +627,13 @@ button {
     align-items: center;
     padding-top: 20px;
     padding-bottom: 30px;
+}
+
+.footer__address {
+    text-align: center;
+    
+    @media #{$tablet} {
+        font-size: 14px;
+    }
 }
 // -- footer

@@ -5,9 +5,9 @@ let
     clientWidth = document.documentElement.clientWidth,
     pageHeader = document.querySelector('.page-header');
 
-if (clientWidth <= 536) {
-    pageHeader.style.height = clientHeight;
-}
+// if (clientWidth <= 536) {
+//     pageHeader.style.height = clientHeight;
+// }
 
 
 let
@@ -120,7 +120,7 @@ function swipe(event) {
                 
                 additionalSwipeDistance = (additionalSwipeDistance > ((swiperListWidth - swiperWidth) + swipeListMarginLeft)) ? ((swiperListWidth - swiperWidth) + swipeListMarginLeft) : additionalSwipeDistance;
 
-                swiperList.style.transition = 'all 0.25s';
+                swiperList.style.transition = 'all 0.35s';
                 swiperList.style.marginLeft = `${swipeListMarginLeft - additionalSwipeDistance}px`;
                 break;
 
@@ -130,7 +130,7 @@ function swipe(event) {
 
                 additionalSwipeDistance = (additionalSwipeDistance > -swipeListMarginLeft) ? -swipeListMarginLeft : additionalSwipeDistance;
 
-                swiperList.style.transition = 'all 0.25s';
+                swiperList.style.transition = 'all 0.35s';
                 swiperList.style.marginLeft = `${swipeListMarginLeft + additionalSwipeDistance}px`;
         }
 

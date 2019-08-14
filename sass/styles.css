@@ -124,6 +124,17 @@ button {
   }
 }
 
+.title--21px {
+  font-size: 21px;
+  text-align: left;
+}
+
+@media (max-width: 536px) {
+  .title--21px {
+    font-size: 19px;
+  }
+}
+
 .introduction {
   width: 100%;
   background: #ffffff url("../img/background-introduction.png") no-repeat center center;
@@ -466,6 +477,12 @@ button {
   margin-bottom: 80px;
 }
 
+@media (max-width: 536px) {
+  .banner {
+    margin-bottom: 40px;
+  }
+}
+
 .banner__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -550,6 +567,12 @@ button {
 
 .consultation-with-designer {
   margin-bottom: 80px;
+}
+
+@media (max-width: 536px) {
+  .consultation-with-designer {
+    margin-bottom: 40px;
+  }
 }
 
 .consultation-with-designer__wrapper {
@@ -646,13 +669,25 @@ button {
   }
 }
 
+.other-services {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 536px) {
+  .other-services {
+    margin-bottom: 20px;
+  }
+}
+
 .other-services__wrapper {
   padding: 0 20px;
   max-width: 1370px;
 }
 
-.other-services {
-  margin-bottom: 40px;
+@media (max-width: 1024px) {
+  .other-services__wrapper {
+    padding: 0;
+  }
 }
 
 .other-services__swiper {
@@ -664,9 +699,13 @@ button {
   padding-top: 40px;
 }
 
-@media (max-width: 1024px) {
+@media (pointer: coarse) {
   .other-services__swiper {
     overflow: auto;
+    -webkit-user-select: auto;
+       -moz-user-select: auto;
+        -ms-user-select: auto;
+            user-select: auto;
   }
 }
 
@@ -689,6 +728,26 @@ button {
           box-shadow: 0px 0px 40px rgba(159, 172, 211, 0.4);
 }
 
+@media (max-width: 536px) {
+  .other-services__item {
+    min-width: 290px;
+  }
+}
+
+@media (max-width: 350px) {
+  .other-services__item {
+    min-width: 250px;
+  }
+}
+
+.other-services__item:last-child {
+  margin-right: 0;
+}
+
+.other-services__image {
+  border-radius: 15px 15px 0 0;
+}
+
 .other-services__text-content {
   pointer-events: none;
   padding: 30px 20px;
@@ -697,9 +756,13 @@ button {
 
 .other-services__title {
   max-width: 80%;
-  font-size: 21px;
-  color: #404040;
   margin-bottom: 20px;
+}
+
+@media (max-width: 536px) {
+  .other-services__title {
+    max-width: 100%;
+  }
 }
 
 .other-services__description {
@@ -722,5 +785,15 @@ button {
           align-items: center;
   padding-top: 20px;
   padding-bottom: 30px;
+}
+
+.footer__address {
+  text-align: center;
+}
+
+@media (max-width: 536px) {
+  .footer__address {
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
