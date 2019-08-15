@@ -1,0 +1,40 @@
+.title {
+    text-align: center;
+    font-size: 48px;
+    color: #404040;
+    font-weight: bold;
+
+    @media #{$tablet} {
+        font-size: 32px;
+    }
+
+    @media #{$mobile} {
+        font-size: 24px;
+    }
+}
+
+.title--36px {
+    font-size: 36px;
+    text-align: left;
+}
+
+.title--21px {
+    font-size: 21px;
+    text-align: left;
+}
+
+@media #{$mobile} {
+    .title--36px {
+        font-size: 18px;
+    }
+}
+
+@media #{$tablet} {
+    .title--36px {
+        font-size: 22px;
+    }
+
+    .title--21px {
+        font-size: 19px;
+    }
+}

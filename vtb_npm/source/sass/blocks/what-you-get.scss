@@ -1,0 +1,75 @@
+.what-you-get__wrapper {
+    max-width: 1240px;
+    padding: 0 20px;
+}
+
+.what-you-get__title {
+    margin-bottom: 40px;
+}
+
+.what-you-get__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.what-you-get__image-wrapper {
+    min-width: 51%;
+}
+
+.what-you-get__image {
+    max-width: 100%;
+    height: auto;
+
+    vertical-align: middle;
+
+    border-radius: 4px;
+}
+
+.what-you-get__image-wrapper:nth-child(odd) {
+    margin-right: 10.5%;
+}
+
+.what-you-get__text-content:nth-child(odd) {
+    margin-right: 8.75%;
+}
+
+.what-you-get__item-title {
+    margin-bottom: 10px;
+}
+
+.what-you-get__item-description {
+    opacity: 0.4;
+    margin-bottom: 20px;
+}
+
+.what-you-get__button {
+    min-width: 195px;
+}
+
+@media #{$tablet} {
+    .what-you-get__item {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .what-you-get__item:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    .what-you-get__image-wrapper {
+        min-width: 100%;
+    }
+
+    .what-you-get__image {
+        margin-bottom: 15px;
+    }
+
+    .what-you-get__image-wrapper:nth-child(odd) {
+        margin-right: 0;
+    }
+
+    .what-you-get__text-content:nth-child(odd) {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,21 @@
+.page-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.footer__address {
+    text-align: center;
+}
+
+@media #{$tablet} {
+    .footer__address {
+        font-size: 14px;
+    }
+}

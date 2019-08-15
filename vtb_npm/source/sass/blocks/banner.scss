@@ -1,0 +1,70 @@
+.banner {
+    background: rgba(29, 74, 215, 0.9) url('../img/background-banner.jpg') no-repeat center center;
+    background-size: cover;
+    margin-bottom: 80px;
+}
+
+.banner__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 88px 20px;
+}
+
+.banner__title {
+    color: #ffffff;
+    flex-grow: 1;
+    margin-right: 50px;
+}
+
+.banner__button-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.banner__button {
+    min-width: 140px;
+    height: 60px;
+    font-size: 24px;
+    margin-right: 25px;
+}
+
+.banner__price {
+    font-size: 36px;
+    color: #ffffff;
+}
+
+@media #{$tablet} {
+    .banner {
+        margin-bottom: 40px;
+    }
+
+    .banner__wrapper {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    .banner__button {
+        font-size: 22px;
+        min-width: 135px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 980px) {
+    .banner__wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .banner__title {
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+}
+
+@media #{$desktop} {
+    .banner__wrapper {
+        padding: 55px 20px;
+    }
+}

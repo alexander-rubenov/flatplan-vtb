@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'VTBGroup', sans-serif;
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+
+    vertical-align: middle;
+}
+
+button {
+    font-family: 'VTBGroup', sans-serif;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+main {
+    padding-top: 80px;
+}
+
+@media #{$tablet} {
+    main {
+        padding-top: 40px;
+    }
+}
