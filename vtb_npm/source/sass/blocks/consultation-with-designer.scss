@@ -58,6 +58,10 @@
     min-height: 100%;
 }
 
+.consultation-with-designer__main-image.medium-zoom-image--opened {
+    min-height: unset;
+}
+
 @media #{$tablet} {
     .consultation-with-designer {
         margin-bottom: 40px;
