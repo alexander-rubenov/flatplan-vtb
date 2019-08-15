@@ -194,9 +194,23 @@
   .model__cross-icon--privacy-policy {
     fill: #404040;
   }
+
+  .close-button--wide-container {
+    top: 20px;
+    right: 20px;
+  }
+
+  .cross-icon--wide-container {
+    fill: #404040;
+  }
 }
 
-.modal--privacy-policy {
+.modal__title--center {
+  text-align: center;
+}
+
+.modal--privacy-policy,
+.modal__public-offer {
   max-width: 1020px;
   border-radius: 15px;
   padding: 40px;
@@ -243,5 +257,29 @@
   ol ol ol ol li:before {
     counter-increment: list4;
     content: counter(list1) "." counter(list2) ". " counter(list3) ". " counter(list4) ". ";
+  }
+}
+
+.public-offer__text,
+.public-offer__terms {
+  margin-bottom: 20px;
+}
+
+.public-offer-list,
+.public-offer__executor,
+.public-offer__design-project {
+  margin-top: 20px;
+}
+
+.public-offer__act {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.public-offer__table {
+  width: 100%;
+  td {
+    width: 50%;
+    border: 1px solid;
   }
 }
