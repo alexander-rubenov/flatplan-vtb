@@ -35,8 +35,6 @@
 }
 
 .consultation-with-designer__main-section {
-    background: #ffffff url('../img/consultation-with-designer-3.jpg') no-repeat center center;
-    background-size: cover;
     margin: 0 20px;
     border-radius: 4px;
     border: 3px solid transparent;
@@ -50,6 +48,14 @@
     background: none;
     border: none;
     outline: none;
+}
+
+.consultation-with-designer__main-image-wrapper {
+    height: 100%;
+}
+
+.consultation-with-designer__main-image {
+    min-height: 100%;
 }
 
 @media #{$tablet} {

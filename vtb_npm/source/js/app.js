@@ -2,7 +2,7 @@
 
 let
     imageGallery = document.querySelector('.consultation-with-designer__gallery'),
-    mainScreenImage = document.querySelector('.consultation-with-designer__main-section');
+    mainScreenImage = document.querySelector('.consultation-with-designer__main-image');
 
 
 function changeMainScreenImage(event) {
@@ -11,10 +11,10 @@ function changeMainScreenImage(event) {
     if (!target.classList.contains('consultation-with-designer__image')) return;
 
     let
-        srcMainScreenImage = getComputedStyle(mainScreenImage).backgroundImage.slice(getComputedStyle(mainScreenImage).backgroundImage.indexOf('vtb_static/img/consultation-with-designer-'), -2),
+        srcMainScreenImage = mainScreenImage.src.slice(target.src.indexOf('vtb_static/img/consultation-with-designer-')),
         srcImg = target.src.slice(target.src.indexOf('vtb_static/img/consultation-with-designer-'));
     
-    mainScreenImage.style.backgroundImage = `url('${srcImg}')`;
+    mainScreenImage.src = srcImg;
     target.src = srcMainScreenImage;
 }
 
