@@ -61,16 +61,20 @@
 
 @media #{$tablet} {
     .introduction__wrapper {
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        max-height: 600px;
         padding-top: 50px;
         padding-bottom: 72px;
     }
 
     .introduction__subtitle {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 
     .introduction__title {
-        margin-bottom: 50px;
+        margin-bottom: 15px;
     }
 
     .introduction__description {
