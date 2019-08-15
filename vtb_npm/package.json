@@ -42,7 +42,7 @@
   "scripts": {
     "build": "gulp build",
     "start": "gulp build && gulp serve",
-    "lighthouse-test": "lighthouse http://127.0.0.1:8000/ --view"
+    "lighthouse-test": "lighthouse http://127.0.0.1:5500/index.html --view"
   },
   "browserslist": [
     "last 2 versions",
