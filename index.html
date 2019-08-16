@@ -94,15 +94,19 @@
     <section class="introduction">
         <div class="wrapper introduction__wrapper">
             <div class="introduction__logos">
-                <svg class="introduction__logo-vtb" width="125" height="25">
-                    <use xlink:href="#logo-vtb"></use>
-                <svg>
+                <a class="introduction__link" href="https://www.vtb.ru/" target="_blank">
+                    <svg class="introduction__logo-vtb" width="125" height="25">
+                        <use xlink:href="#logo-vtb"></use>
+                    <svg>
+                </a>
                 <span class="introduction__plus-sign">
                     +
                 </span>
-                <svg class="introduction__logo-flatplan" width="45" height="45">
-                    <use xlink:href="#logo-flatplan"></use>
-                <svg>
+                <a class="introduction__link" href="https://flatplan.design/" target="_blank">
+                    <svg class="introduction__logo-flatplan" width="45" height="45">
+                        <use xlink:href="#logo-flatplan"></use>
+                    <svg>
+                </a>
             </div>
 
             <div class="introduction__text-content">
@@ -274,9 +278,9 @@
 
         <!-- MODALS -->
         <div class="modal__bg" id="callback-modal">
-            <div class="modal modal--callback">
+            <div class="modal">
                 <div class="modal__wrapper">
-                    <p class="title modal__title">
+                    <p class="title modal__title modal__title--big-margin-bottom">
                         Сделать заказ
                     </p>
 
@@ -302,11 +306,15 @@
                         <p class="modal__text">
                             Нажимая кнопку «Оплатить», я соглашаюсь с
                             <button class="modal__button" data-modal-target="public-offer">
-                                офертой
+                                <span class="modal__button-text">
+                                    офертой
+                                </span>
                             </button>
                             и даю согласие на обработку
                             <button class="modal__button" data-modal-target="privacy-policy">
-                                персональных данных
+                                <span class="modal__button-text">
+                                    персональных данных
+                                </span>
                             </button>
                         </p>
 
@@ -320,7 +328,7 @@
                     <span class="visually-hidden">
                         Закрыть модальное окно
                     </span>
-                    <svg class="model__cross-icon" width="20" height="20" aria-hidden="true">
+                    <svg class="modal__cross-icon" width="20" height="20" aria-hidden="true">
                         <use xlink:href="#cross-icon"></use>
                     </svg>
                 </button>
@@ -328,15 +336,15 @@
         </div>
 
         <div class="modal__bg" id="privacy-policy">
-            <div class="modal modal--privacy-policy">
+            <div class="modal modal--wide">
                 <div class="modal__wrapper">
-                    <p class="title modal__title modal__title--privacy-policy">
+                    <p class="title modal__title modal__title--center modal__title--uppercase">
                         Политика<br>
                         в области обработки и защиты персональных данныха
                     </p>
 
-                    <div class="modal__content">
-                        <p class="modal__text modal__text--privacy-policy">
+                    <div class="modal__content modal__text--small">
+                        <p class="modal__text modal__text--black">
                             Настоящий документ (далее – Политика) устанавливает принципы, цели, условия и способы обработки персональных данных Заказчика Исполнителем.
                         </p>
                         <ol class="privacy-list">
@@ -851,12 +859,12 @@
                     </div>
                 </div>
 
-                <button class="modal__close-button--privacy-policy modal__close-button"
+                <button class="modal__close-button--wide-container modal__close-button"
                     data-modal-close="privacy-policy">
                     <span class="visually-hidden">
                         Закрыть модальное окно
                     </span>
-                    <svg class="model__cross-icon--privacy-policy" width="20" height="20" aria-hidden="true">
+                    <svg class="modal__cross-icon modal__cross-icon--wide-container" width="20" height="20" aria-hidden="true">
                         <use xlink:href="#cross-icon"></use>
                     </svg>
                 </button>
@@ -864,13 +872,13 @@
         </div>
 
         <div class="modal__bg" id="public-offer">
-            <div class="modal modal__public-offer">
+            <div class="modal modal--wide">
                 <div class="modal__wrapper">
                     <p class="title modal__title modal__title--center">
                         Оферта
                     </p>
 
-                    <div class="modal__content">
+                    <div class="modal__content modal__text--small">
                         <p class="public-offer__text">
                             Настоящая публичная оферта является официальным предложением Общества с ограниченной
                             ответственностью “Флэтплан” (далее – «Исполнитель») любому дееспособному физическому лицу
@@ -1530,7 +1538,7 @@
                     <span class="visually-hidden">
                         Закрыть модальное окно
                     </span>
-                    <svg class="model__cross-icon cross-icon--wide-container" width="20" height="20" aria-hidden="true">
+                    <svg class="modal__cross-icon cross-icon--wide-container" width="20" height="20" aria-hidden="true">
                         <use xlink:href="#cross-icon"></use>
                     </svg>
                 </button>
@@ -1538,7 +1546,7 @@
         </div>
 
         <div class="modal__bg" id="service-example">
-            <div class="modal modal--wide modal__service-example">
+            <div class="modal modal--wide">
                 <div class="modal__wrapper">
                     <p class="title modal__title--center modal__title"></p> <!-- Зполняется через JS-->
 
@@ -1551,7 +1559,7 @@
                     <span class="visually-hidden">
                         Закрыть модальное окно
                     </span>
-                    <svg class="model__cross-icon" width="20" height="20" aria-hidden="true">
+                    <svg class="modal__cross-icon" width="20" height="20" aria-hidden="true">
                         <use xlink:href="#cross-icon"></use>
                     </svg>
                 </button>

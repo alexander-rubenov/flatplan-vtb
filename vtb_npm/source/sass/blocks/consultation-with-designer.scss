@@ -38,6 +38,13 @@
     background: none;
     border: none;
     outline: none;
+
+    border-radius: 3px;
+    border: 3px solid transparent;
+
+    &:hover, &:focus {
+        border-color: $blue;
+    }
 }
 
 .consultation-with-designer__main-image-wrapper {

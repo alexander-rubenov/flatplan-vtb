@@ -10,7 +10,7 @@
 
     (openedModalID !== undefined) ? closeModalWindow(openedModalID) : null;
 
-    (modalID === 'service-example') ? createHeaderOfServiceExampleModal(target, targetModal) : null;
+    (modalID === 'service-example') ? createServiceExampleModal(target, targetModal) : null;
 
     openedModalID = modalID;
 
@@ -58,7 +58,7 @@
     closeModalWindow: closeModalWindow,
   };
 
-  function createHeaderOfServiceExampleModal(target, targetModal) {
+  function createServiceExampleModal(target, targetModal) {
     const
       serviceTitle = target.parentElement.querySelector('.what-you-get__item-title').textContent.replace(/\s+/g,' ').trim(),
       modalTitle = targetModal.querySelector('.modal__title'),
@@ -70,4 +70,27 @@
   }
 
   initializeModalTriggers();
+
+
+
+  let isDialogSupported = true;
+    if (!window.HTMLDialogElement) {
+    document.body.classList.add("no-dialog");
+    isDialogSupported = false;
+  }
+
+  button.onclick = () => {
+    if (isDialogSupported) {
+      modal.showModal();
+    } else {
+      modal.setAttribute("open", "");
+    }
+    //   Focus first input when dialog opens
+    modal.querySelector("input").focus();
+  };
+
+  modal.addEventListener("transitionend", e => {
+    modal.querySelector("input").focus();
+  });
+
 })();
