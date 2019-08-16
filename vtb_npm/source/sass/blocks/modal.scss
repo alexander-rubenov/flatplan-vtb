@@ -132,6 +132,7 @@
   outline: none;
   margin-top: 3px;
   color: #404040;
+  font-size: 16px;
 
   &--error {
     border-color: red;
@@ -209,8 +210,14 @@
   text-align: center;
 }
 
+.modal__content--center {
+  display: flex;
+  justify-content: center;
+}
+
 .modal--privacy-policy,
-.modal__public-offer {
+.modal__public-offer,
+.modal--wide {
   max-width: 1020px;
   border-radius: 15px;
   padding: 40px;
@@ -258,6 +265,14 @@
     counter-increment: list4;
     content: counter(list1) "." counter(list2) ". " counter(list3) ". " counter(list4) ". ";
   }
+}
+
+.modal__service-example {
+  padding: 30px;
+}
+
+.modal__image {
+  min-width: 100%;
 }
 
 .public-offer__text,

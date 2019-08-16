@@ -115,14 +115,14 @@
                 <p class="introduction__description">
                     Спроектируем, спланируем и проконтролируем ремонт вашей квартиры
                 </p>
-                <button class="button button--blue" type="button" title="Узнать подробнее как это работает">
+                <button class="button button--blue" data-scroll-link="page-main" type="button" title="Узнать подробнее как это работает">
                     Подробнее
                 </button>
             </div>
         </div>
     </section>
 
-    <main class="page-main" role="main">
+    <main class="page-main" id="page-main" role="main">
         <section class="how-it-works">
             <div class="wrapper how-it-works__wrapper">
                 <h2 class="title how-it-works__title">
@@ -220,7 +220,7 @@
                                 План расстановки мебели подскажет как грамотно сформировать пространство и ответит на
                                 вопрос как удобно и эргономично расположить светильники, мебель, шкафы и кухню
                             </p>
-                            <button class="button button--blue what-you-get__button" type="button" title="Посмотреть пример плана расстановки мебели">
+                            <button class="button button--blue what-you-get__button" data-modal-target="service-example" data-modal-service-example-image="vtb_static/img/plan-of-arrangement-of-furniture.jpg" type="button" title="Посмотреть пример плана расстановки мебели">
                                 Посмотреть пример
                             </button>
                         </div>
@@ -247,7 +247,7 @@
                                 сложностей при планировании ремонта и зафиксировать все необходимые детали о вашей
                                 квартире
                             </p>
-                            <button class="button button--blue what-you-get__button" type="button" title="Посмотреть пример обмерного плана">
+                            <button class="button button--blue what-you-get__button" data-modal-target="service-example" data-modal-service-example-image="vtb_static/img/measurement-plan.jpg" type="button" title="Посмотреть пример обмерного плана">
                                 Посмотреть пример
                             </button>
                         </div>
@@ -1536,6 +1536,28 @@
                 </button>
             </div>
         </div>
+
+        <div class="modal__bg" id="service-example">
+            <div class="modal modal--wide modal__service-example">
+                <div class="modal__wrapper">
+                    <p class="title modal__title--center modal__title"></p> <!-- Зполняется через JS-->
+
+                    <div class="modal__content modal__content--center">
+                        <img class="modal__image" src="" alt="Изображение примера услуги">
+                    </div>
+                </div>
+
+                <button class="modal__close-button" data-modal-close="service-example">
+                    <span class="visually-hidden">
+                        Закрыть модальное окно
+                    </span>
+                    <svg class="model__cross-icon" width="20" height="20" aria-hidden="true">
+                        <use xlink:href="#cross-icon"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
         <!-- -- MODALS -->
 
         <section class="consultation-with-designer">
@@ -1553,13 +1575,13 @@
                         <button class="consultation-with-designer__image-wrapper consultation-with-designer__image-wrapper-first" type="button">
                             <picture>
                                 <source type="image/webp" srcset="vtb_static/img/webp/consultation-with-designer-1.webp">
-                                <img class="consultation-with-designer__image" src="vtb_static/img/consultation-with-designer-1.jpg" alt="Изображение интерьера вашей будущей квартиры">
+                                <img class="consultation-with-designer__image" data-zoomable src="vtb_static/img/consultation-with-designer-1.jpg" alt="Изображение интерьера вашей будущей квартиры">
                             </picture>
                         </button>
                         <button class="consultation-with-designer__image-wrapper" type="button">
                             <picture>
                                 <source type="image/webp" srcset="vtb_static/img/webp/consultation-with-designer-2.webp">
-                                <img class="consultation-with-designer__image" src="vtb_static/img/consultation-with-designer-2.jpg" alt="Изображение интерьера вашей будущей квартиры">
+                                <img class="consultation-with-designer__image" data-zoomable src="vtb_static/img/consultation-with-designer-2.jpg" alt="Изображение интерьера вашей будущей квартиры">
                             </picture>
                         </button>
                     </div>
@@ -1575,13 +1597,13 @@
                         <button class="consultation-with-designer__image-wrapper consultation-with-designer__image-wrapper-first" type="button">
                             <picture>
                                 <source type="image/webp" srcset="vtb_static/img/webp/consultation-with-designer-4.webp">
-                                <img class="consultation-with-designer__image" src="vtb_static/img/consultation-with-designer-4.jpg" alt="Изображение интерьера вашей будущей квартиры">
+                                <img class="consultation-with-designer__image" data-zoomable src="vtb_static/img/consultation-with-designer-4.jpg" alt="Изображение интерьера вашей будущей квартиры">
                             </picture>
                         </button>
                         <button class="consultation-with-designer__image-wrapper" type="button">
                             <picture>
                                 <source type="image/webp" srcset="vtb_static/img/webp/consultation-with-designer-5.webp">
-                                <img class="consultation-with-designer__image" src="vtb_static/img/consultation-with-designer-5.jpg" alt="Изображение интерьера вашей будущей квартиры">
+                                <img class="consultation-with-designer__image" data-zoomable src="vtb_static/img/consultation-with-designer-5.jpg" alt="Изображение интерьера вашей будущей квартиры">
                             </picture>
                         </button>
                     </div>

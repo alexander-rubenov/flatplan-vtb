@@ -10,6 +10,8 @@
 
     (openedModalID !== undefined) ? closeModalWindow(openedModalID) : null;
 
+    (modalID === 'service-example') ? createHeaderOfServiceExampleModal(target, targetModal) : null;
+
     openedModalID = modalID;
 
     targetModal.classList.add('visible');
@@ -55,6 +57,17 @@
     openModalWindow: openModalWindow,
     closeModalWindow: closeModalWindow,
   };
+
+  function createHeaderOfServiceExampleModal(target, targetModal) {
+    const
+      serviceTitle = target.parentElement.querySelector('.what-you-get__item-title').textContent.replace(/\s+/g,' ').trim(),
+      modalTitle = targetModal.querySelector('.modal__title'),
+      pathToImage = target.dataset.modalServiceExampleImage,
+      modalImage = targetModal.querySelector('.modal__image');
+    
+    modalTitle.textContent = serviceTitle;
+    modalImage.src = pathToImage;
+  }
 
   initializeModalTriggers();
 })();

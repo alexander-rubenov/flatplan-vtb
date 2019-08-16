@@ -25,19 +25,9 @@
     grid-template-columns: 1fr 2fr 1fr;
 }
 
-.consultation-with-designer__image {
-    border-radius: 3px;
-    border: 3px solid transparent;
-
-    &:hover, &:focus {
-        border-color: $blue;
-    }
-}
-
 .consultation-with-designer__main-section {
     margin: 0 20px;
     border-radius: 4px;
-    border: 3px solid transparent;
 }
 
 .consultation-with-designer__image-wrapper-first {
