@@ -19,17 +19,41 @@
 
     window.addEventListener('click', closeModalByBackground);
     window.addEventListener('keydown', closeModalByEsc);
+
+    const
+      focusableElements = targetModal.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])'),
+      firstFocusableElement = focusableElements[0],
+      lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+    function lockFocusInModal(event) {
+      if (event.key === 'Tab' || event.keyCode === 9) {
+        if (event.shiftKey) {
+          if (document.activeElement === firstFocusableElement) {
+            event.preventDefault();
+            lastFocusableElement.focus();
+          }
+        } else {
+          if (document.activeElement === lastFocusableElement) {
+            event.preventDefault();  
+            firstFocusableElement.focus();
+          }
+        }
+      }
+    }
+
+    targetModal.addEventListener('keydown', lockFocusInModal);
+
   };
 
   const closeModalByEsc = (evt) => {
     if (evt.key === 'Escape') {
-      closeModalWindow(openedModalID)
+      closeModalWindow(openedModalID);
     }
   };
 
   const closeModalByBackground = (evt) => {
     if (evt.target.classList.contains('modal__bg')) {
-      closeModalWindow(openedModalID)
+      closeModalWindow(openedModalID);
     }
   };
 
@@ -43,6 +67,7 @@
 
     window.removeEventListener('click', closeModalByBackground);
     window.removeEventListener('keydown', closeModalByEsc);
+    // targetModal.removeEventListener('keydown', lockFocusInModal);
   };
 
   const initializeModalTriggers = () => {
@@ -70,27 +95,5 @@
   }
 
   initializeModalTriggers();
-
-
-
-  let isDialogSupported = true;
-    if (!window.HTMLDialogElement) {
-    document.body.classList.add("no-dialog");
-    isDialogSupported = false;
-  }
-
-  button.onclick = () => {
-    if (isDialogSupported) {
-      modal.showModal();
-    } else {
-      modal.setAttribute("open", "");
-    }
-    //   Focus first input when dialog opens
-    modal.querySelector("input").focus();
-  };
-
-  modal.addEventListener("transitionend", e => {
-    modal.querySelector("input").focus();
-  });
 
 })();
