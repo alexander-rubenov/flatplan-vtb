@@ -4,5 +4,6 @@
 //= parts/swiper.js
 //= parts/modals.js
 //= parts/scroll-to-element.js
+//= parts/lazyload.js
 
 mediumZoom('[data-zoomable]');
