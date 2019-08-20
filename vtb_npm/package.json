@@ -33,10 +33,12 @@
     "gulp-watch": "^5.0.1",
     "gulp-webp": "^3.0.0",
     "imagemin-pngquant": "^6.0.0",
+    "postcss-reporter": "^6.0.1",
+    "postcss-scss": "^2.0.0",
     "postcss-sorting": "^4.0.1",
     "rimraf": "^2.7.1",
     "run-sequence": "^2.2.1",
-    "stylelint": "^9.9.0",
+    "stylelint": "^9.10.1",
     "stylelint-config-htmlacademy": "^0.1.1"
   },
   "scripts": {
@@ -57,6 +59,7 @@
     "node": "8.9"
   },
   "dependencies": {
+    "gulp-sass-lint": "^1.4.0",
     "micromodal": "^0.3.2",
     "natives": "^1.1.6"
   }

@@ -26,10 +26,14 @@ const gulp = require('gulp'),
   watch = require('gulp-watch'),
   webp = require("gulp-webp"),
   qualityOfImage = 65;
+  // csscomb = require("gulp-csscomb");
+  // sorting = require('postcss-sorting'),
+  // gulpStylelint = require('gulp-stylelint');
 
 const path = {
   src: {
     style: 'source/sass/style.scss',
+    test: 'source/sass/test.scss',
     img: 'source/img/',
     fonts: 'source/fonts/',
     js: 'source/js/**/*.js',
@@ -61,6 +65,79 @@ gulp.task('style', function () {
     .pipe(server.stream());
 });
 
+// gulp.task('stylelint', function () {
+//   return gulp.src(path.src.test)
+//   .pipe(postcss([sorting({
+//     "properties-order": [
+//         "position",
+//         "top",
+//         "right",
+//         "bottom",
+//         "left",
+//         "opacity",
+//         "visibility",
+//         "z-index",
+
+//         "",
+
+//         "display",
+//         "align-items",
+//         "justify-content",
+//         "float",
+//         "width",
+//         "min-width",
+//         "max-width",
+//         "height",
+//         "min-height",
+//         "max-height",
+//         "margin",
+//         "padding",
+
+//         "",
+
+//         "font",
+//         "font-family",
+//         "font-size",
+//         "font-weight",
+//         "font-style",
+//         "line-height",
+//         "text-align",
+//         "color",
+
+//         "",
+
+//         "background-color",
+//         "border",
+//         "border-radius",
+
+//         "",
+
+//         "transition",
+//         "will-change",
+//     ],
+//     "unspecified-properties-position": "bottom"
+//   })]))
+  // .pipe(gulp.dest(file => {
+  //   return file.base;
+  // }));
+// });
+
+// gulp.task('lint-css', function lintCssTask() {
+//   return gulp.src(path.src.test)
+//     .pipe(gulpStylelint({
+//       reporters: [
+//         {formatter: 'string', console: true}
+//       ]
+//     }));
+// });
+
+// gulp.task('stylelint', function() {
+//   return gulp.src(path.src.test)
+//     .pipe(csscomb())
+//     .pipe(gulp.dest(file => {
+//       return file.base;
+//     }));
+// });
 
 gulp.task('clean', () => {
   return del(path.clean, {
@@ -100,6 +177,9 @@ gulp.task("build", done => {
   runSequence(
     'clean',
     'copy',
+    // 'fix-css',
+    // 'stylelint',
+    // "lint-css",
     'style',
     'js',
     done
@@ -118,4 +198,3 @@ gulp.task("serve", ["style"], () => {
   gulp.watch("source/sass/**/*.scss", ["style"]);
   gulp.watch("source/js/**/*.js", ["js"]);
 });
-
