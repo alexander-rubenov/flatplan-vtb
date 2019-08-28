@@ -1,8 +1,8 @@
 .title {
-    text-align: center;
     font-size: 48px;
-    color: #404040;
     font-weight: bold;
+    text-align: center;
+    color: #404040;
 
     @media #{$tablet} {
         font-size: 32px;

@@ -1,7 +1,7 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -22,6 +22,7 @@ img {
 
 picture {
     opacity: 0;
+
     transition: opacity 0.35s;
 }
 
@@ -31,8 +32,10 @@ picture[data-picture="opacity-1"] {
 
 button {
     font-family: 'VTBGroup', sans-serif;
-    cursor: pointer;
+
     transition: all 0.25s;
+
+    cursor: pointer;
 }
 
 input {

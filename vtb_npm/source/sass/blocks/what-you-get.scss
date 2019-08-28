@@ -21,9 +21,9 @@
     max-width: 100%;
     height: auto;
 
-    vertical-align: middle;
-
     border-radius: 4px;
+
+    vertical-align: middle;
 }
 
 .what-you-get__image-wrapper:nth-child(odd) {
@@ -40,6 +40,7 @@
 
 .what-you-get__item-description {
     opacity: 0.4;
+
     margin-bottom: 20px;
 }
 

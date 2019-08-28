@@ -12,12 +12,14 @@
 }
 
 .consultation-with-designer__text-content {
+    opacity: 0.4;
+
     margin: 0 auto;
     margin-bottom: 40px;
+    padding: 0 170px;
+
     font-size: 18px;
     text-align: center;
-    opacity: 0.4;
-    padding: 0 170px;
 }
 
 .consultation-with-designer__gallery {
@@ -27,6 +29,7 @@
 
 .consultation-with-designer__main-section {
     margin: 0 20px;
+
     border-radius: 4px;
 }
 
@@ -37,10 +40,9 @@
 .consultation-with-designer__image-wrapper {
     background: none;
     border: none;
-    outline: none;
-
-    border-radius: 3px;
     border: 3px solid transparent;
+    border-radius: 3px;
+    outline: none;
 
     &:hover, &:focus {
         border-color: $blue;
@@ -85,8 +87,8 @@
     }
 
     .consultation-with-designer__image-wrapper-first {
-        margin-bottom: 0;
         margin-right: 5px;
+        margin-bottom: 0;
     }
 
     .consultation-with-designer__image-wrapper {

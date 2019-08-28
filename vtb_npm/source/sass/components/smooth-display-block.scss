@@ -1,15 +1,16 @@
 @media #{$tablet} {
     .smooth-display-block {
+        position: relative;
+        top: 120px;
         opacity: 0;
+
         transition:
             top 0.5s ease-out,
             opacity 0.5s ease;
-        position: relative;
-        top: 120px;
     }
 
     .smooth-display-block[data-smooth-display-block] {
-        opacity: 1;
         top: 0;
+        opacity: 1;
     }
 }

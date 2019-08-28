@@ -1,42 +1,46 @@
 @font-face {
     font-family: 'VTBGroup';
+    font-weight: 300;
+    font-style: normal;
+
     src: url("../fonts/VTBGroup-Light/VTBGroup-Light.eot");
     src:
         url("../fonts/VTBGroup-Light/VTBGroup-Light.eot?#iefix") format("embedded-opentype"),
         url("../fonts/VTBGroup-Light/VTBGroup-Light.woff2") format("woff2"),
         url("../fonts/VTBGroup-Light/VTBGroup-Light.woff") format("woff"),
         url("../fonts/VTBGroup-Light/VTBGroup-Light.ttf") format("truetype");
-    font-weight: 300;
-    font-style: normal
 }
 @font-face {
     font-family: 'VTBGroup';
+    font-weight: 400;
+    font-style: normal;
+
     src: url("../fonts/VTBGroup-Book/VTBGroup-Book.eot");
     src:
         url("../fonts/VTBGroup-Book/VTBGroup-Book.eot?#iefix") format("embedded-opentype"),
         url("../fonts/VTBGroup-Book/VTBGroup-Book.woff2") format("woff2"),
         url("../fonts/VTBGroup-Book/VTBGroup-Book.woff") format("woff"),
         url("../fonts/VTBGroup-Book/VTBGroup-Book.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal
 }
 @font-face {
     font-family: 'VTBGroup';
+    font-weight: 600;
+    font-style: normal;
+
     src: url("../fonts/VTBGroup-DemiBold/VTBGroup-DemiBold.eot");
     src:
         url("../fonts/VTBGroup-DemiBold/VTBGroup-DemiBold.eot?#iefix") format("embedded-opentype"),
         url("../fonts/VTBGroup-DemiBold/VTBGroup-DemiBold.woff2") format("woff2"),
         url("../fonts/VTBGroup-DemiBold/VTBGroup-DemiBold.woff") format("woff"),
         url("../fonts/VTBGroup-DemiBold/VTBGroup-DemiBold.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal
 }
 @font-face {
     font-family: 'Formular';
+    font-weight: normal;
+    font-style: normal;
+
     src:
         url("../fonts/Formular/formular-regular.woff2") format("woff2"),
         url("../fonts/Formular/formular-regular.woff") format("woff"),
         url("../fonts/Formular/formular-regular.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal
 }

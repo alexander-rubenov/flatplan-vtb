@@ -3,28 +3,30 @@
 }
 
 .other-services__wrapper {
-    padding: 0 20px;
     max-width: 1370px;
+    padding: 0 20px;
 }
 
 .other-services__swiper {
-    user-select: none;
     overflow-x: hidden;
+
     padding-top: 40px;
+
+    user-select: none;
 }
 
 .other-services__list {
-    width: fit-content;
     display: flex;
+    width: fit-content;
     padding: 0 40px;
 }
 
 .other-services__item {
-    min-width: 387px;
     display: inline-block;
+    min-width: 387px;
     margin-right: 40px;
-    border-radius: 15px;
 
+    border-radius: 15px;
     box-shadow: 0px 0px 40px rgba(159, 172, 211, 0.4);
 
     &:last-child {
@@ -37,9 +39,10 @@
 }
 
 .other-services__text-content {
-    pointer-events: none;
     padding: 30px 20px;
     padding-bottom: 50px;
+
+    pointer-events: none;
 }
 
 .other-services__title {
@@ -80,6 +83,7 @@
 @media (pointer: coarse) {
     .other-services__swiper {
         overflow: auto;
+
         user-select: auto;
         -webkit-overflow-scrolling: touch;
     }

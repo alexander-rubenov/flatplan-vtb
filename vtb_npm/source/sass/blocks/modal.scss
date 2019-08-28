@@ -4,14 +4,15 @@
   max-width: 500px;
   margin-bottom: 10px;
   padding: 20px;
-  vertical-align: middle;
-  border-radius: 15px;
-
-  background: #ffffff;
 
   text-align: left;
 
+  background: #ffffff;
+  border-radius: 15px;
+
   transform: translate3d(0,0,0);
+
+  vertical-align: middle;
 }
 
 .modal__select {
@@ -31,35 +32,34 @@
 
 .modal__bg {
   position: fixed;
-  z-index: 11;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  overflow: auto;
-  visibility: hidden;
   opacity: 0;
+  visibility: hidden;
+  overflow: auto;
+  z-index: 11;
 
   padding: 40px 40px 0 40px;
 
-  background: rgba(43,46,56,.9);
-
   text-align: center;
+
+  background: rgba(43,46,56,.9);
 
   transition: all 0.15s;
 
   &.visible {
-    visibility: visible;
     opacity: 1;
+    visibility: visible;
   }
 
   &:after {
-    content: "";
-
     display: inline-block;
     height: 100%;
     margin-left: -.05em;
 
+    content: "";
     vertical-align: middle;
   }
 }
@@ -68,8 +68,9 @@
   position: absolute;
   top: -27.5px;
   right: -27.5px;
-  border: none;
+
   background-color: transparent;
+  border: none;
 
   fill: #000000;
 
@@ -108,8 +109,9 @@
 
 .modal__title {
   margin-bottom: 20px;
-  text-align: left;
+
   font-size: 24px;
+  text-align: left;
 }
 
 .modal__title--center {
@@ -125,39 +127,46 @@
 }
 
 .modal__input {
-  resize: none;
+  margin-top: 3px;
+  padding: 13px 15px;
+
+  font-size: 16px;
+  color: #404040;
 
   border: 2px solid #E8E8E8;
   border-radius: 3px;
-  padding: 13px 15px;
-  cursor: pointer;
   outline: none;
-  margin-top: 3px;
-  color: #404040;
-  font-size: 16px;
+
+  resize: none;
+  cursor: pointer;
 
   &--error {
     border-color: red;
   }
 
   &:focus, &:active {
-    border-color: #ababab;
     color: #404040;
+
+    border-color: #ababab;
   }
 }
 
 .modal__text {
-  display: inline-block;
-  text-align: center;
   opacity: 0.3;
-  font-size: 12px;
+
+  display: inline-block;
   margin-bottom: 20px;
+
+  font-size: 12px;
+  text-align: center;
 }
 
 .modal__text--black {
   opacity: 1;
+
   font-size: 16px;
   text-align: left;
+
   text-indent: 20px;
 }
 
@@ -168,9 +177,10 @@
 
 .modal__button {
   display: inline;
+
+  background-color: transparent;
   border: none;
   outline: none;
-  background-color: transparent;
 
   &:hover, &:focus {
     color: $blue;
@@ -178,9 +188,10 @@
 }
 
 .modal__button-text {
-  text-decoration: underline;
-  font-size: 12px;
   opacity: 1;
+
+  font-size: 12px;
+  text-decoration: underline;
 }
 
 .modal__cross-icon {
@@ -198,16 +209,19 @@
 
 .modal--wide {
   max-width: 1020px;
-  border-radius: 15px;
   padding: 30px;
 
+  border-radius: 15px;
+
   li {
-    list-style-type: none;
     padding: 5px 0;
+
+    list-style-type: none;
   }
   
   ol {
     font-size: inherit;
+
     counter-reset: list1;
   }
   
@@ -217,8 +231,9 @@
   }
   
   ol ol {
-    counter-reset: list2;
     padding-left: 20px;
+
+    counter-reset: list2;
   }
   
   ol ol li:before {
@@ -227,8 +242,9 @@
   }
   
   ol ol ol {
-    counter-reset: list3;
     padding-left: 20px;
+
+    counter-reset: list3;
   }
   
   ol ol ol li:before {
@@ -263,14 +279,16 @@
 }
 
 .public-offer__act {
-  text-align: center;
   margin-bottom: 10px;
+
+  text-align: center;
 }
 
 .public-offer__table {
   width: 100%;
   td {
     width: 50%;
+
     border: 1px solid;
   }
 }
